@@ -1,0 +1,17 @@
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fffec5;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.feature-card .icon {
+  width: 50px;
+}
+
+.feature-card .title {
+  font-size: 25px;
+  font-weight: 700;
+}

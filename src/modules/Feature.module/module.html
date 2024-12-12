@@ -1,0 +1,32 @@
+{% if module.feature_item|length > 0 %}
+<div class="feature-section">
+  <div class="row-fluid">
+	{% for item in module.feature_item %}
+    <div class="span4">
+      <div class="feature-card">
+		{% if item.icon.name %}
+        <div class="icon">
+		    {% icon
+				name="{{ item.icon.name }}"
+				style="{{ item.icon.type }}"
+				unicode="{{ item.icon.unicode }}"
+				icon_set="{{ item.icon.icon_set }}"
+			%}
+		</div>
+		{% endif %}
+		{% if item.title %}
+        <div class="title">
+		    {{ item.title }}
+		</div>
+		{% endif %}
+		{% if item.description %}
+        <div class="description">
+		    {{ item.description }}
+		</div>
+		{% endif %}
+      </div>
+    </div>
+	{% endfor %}
+  </div>
+</div>
+{% endif %}

@@ -1,0 +1,55 @@
+<!--
+  templateType: section
+  label: Feature
+  isAvailableForNewContent: true
+  screenshotPath: ../images/sections-preview/feature.png
+  description: "Feature."
+-->
+
+{% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "100px",
+      "top" : "100px"
+    }
+  }
+%}
+  {% dnd_column
+    offset=0,
+    width=12
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="/CMS Developers Test/modules/Feature",
+        offset=0,
+        width=12,
+        feature_item=[ {
+          "description" : "<div>\n<p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa tempora similique eos repudiandae adipisci quaerat consectetur</span></p>\n</div>",
+          "icon" : {
+            "name" : "Algolia",
+            "type" : "REGULAR",
+            "unicode" : "f36c"
+          },
+          "title" : "Feature Title"
+        }, {
+          "description" : "<div>\n<p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa tempora similique eos repudiandae adipisci quaerat consectetur</span></p>\n</div>",
+          "icon" : {
+            "name" : "Alternate GitHub",
+            "type" : "REGULAR",
+            "unicode" : "f113"
+          },
+          "title" : "Feature Title"
+        }, {
+          "description" : "<div>\n<p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa tempora similique eos repudiandae adipisci quaerat consectetur</span></p>\n</div>",
+          "icon" : {
+            "name" : "Alternate Share Square",
+            "type" : "SOLID",
+            "unicode" : "f1e1"
+          },
+          "title" : "Feature Title"
+        } ]
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

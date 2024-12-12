@@ -1,0 +1,31 @@
+<!--
+  templateType: section
+  label: Latest blog post
+  isAvailableForNewContent: true
+  screenshotPath: ../images/sections-preview/rec-blog.png
+  description: "Latest blog post."
+-->
+
+{% dnd_section
+    background_color="rgba(12, 83, 148, 1)",
+    padding={
+      "default" : {
+        "bottom" : "100px",
+        "top" : "100px"
+      }
+    }
+  %}
+    {% dnd_column
+      offset=0,
+      width=12
+    %}
+      {% dnd_row %}
+        {% dnd_module
+          path="/CMS Developers Test/modules/Latest blog post",
+          offset=0,
+          width=12
+        %}
+        {% end_dnd_module %}
+      {% end_dnd_row %}
+    {% end_dnd_column %}
+  {% end_dnd_section %}

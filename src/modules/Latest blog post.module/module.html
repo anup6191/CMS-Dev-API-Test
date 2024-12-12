@@ -1,0 +1,28 @@
+{% set rec_posts = blog_recent_posts(module.blog, 3) %}
+{% if rec_posts|length > 0 %}
+<div class="latest-blog-post">
+  <div class="row-fluid">
+	{% for rec_post in rec_posts %}
+    <div class="span4">
+      <div class="latest-blog-post__card">
+		{% if rec_post.featured_image %}
+		<div class="latest-blog-post__image">
+            <img src="{{ resize_image_url(rec_post.featured_image, 0, 0, 300) }}" alt="{{ rec_post.name }}" title="{{ rec_post.name }}" width="300" height="300"/>
+        </div>
+		{% endif %}
+		{% if rec_post.name %}
+        <div class="latest-blog-post__title">
+		  <h2><a href="{{rec_post.absolute_url}}">{{ rec_post.name }}</a></h2>
+		</div>
+		{% endif %}
+		{% if rec_post.post_list_content %}
+        <div class="latest-blog-post__description">
+		    {{ rec_post.post_list_content|truncatehtml(150, '...' , false) }}
+		</div>
+		{% endif %}
+      </div>
+    </div>
+	{% endfor %}
+  </div>
+</div>
+{% endif %}

@@ -1,0 +1,51 @@
+
+### OSX ###
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# HubSpot configs
+hubspot.config.yaml
+hubspot.config.yml
+
+# Lock files
+package-lock.json
+yarn.lock
+
+# dotenv environment variables file
+.env
+.env.test
+
+# Dependency directories
+node_modules/
+
+### Node ###
+# .node-version
+# Logs
+logs
+*.log
+npm-debug.log*
+
+### VisualStudioCode ###
+.vscode/*
+# !.vscode/settings.json
+# ignore .vscode settings.json for now
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Output of 'npm pack'
+*.tgz
+
+# TypeScript v1 declaration files
+typings/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache

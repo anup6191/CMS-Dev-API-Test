@@ -1,0 +1,79 @@
+[ {
+  "id" : "cdfad3c5-2c20-530c-eec8-96928eaf7621",
+  "name" : "feature_item",
+  "display_width" : null,
+  "label" : "Feature item ",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 0,
+    "max" : null,
+    "sorting_label_field" : "f0d1c56c-5dc0-d132-2b16-da87bab1d3a7",
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "575c1086-b84b-4f95-1eea-c2e14277207b",
+    "name" : "icon",
+    "display_width" : null,
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "icon_set" : "fontawesome-5.14.0",
+    "type" : "icon",
+    "default" : {
+      "name" : "Algolia",
+      "unicode" : "f36c",
+      "type" : "REGULAR"
+    }
+  }, {
+    "id" : "f0d1c56c-5dc0-d132-2b16-da87bab1d3a7",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Feature Title"
+  }, {
+    "id" : "3ba95178-32ca-8f19-dca2-d3b593f02cee",
+    "name" : "description",
+    "display_width" : null,
+    "label" : "Description",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<div>\n<p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa tempora similique eos repudiandae adipisci quaerat consectetur</span></p>\n</div>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "group_occurrence_meta" : null,
+  "type" : "group",
+  "default" : [ {
+    "icon" : {
+      "name" : "Algolia",
+      "unicode" : "f36c",
+      "type" : "REGULAR"
+    },
+    "title" : "Feature Title",
+    "description" : "<div>\n<p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa tempora similique eos repudiandae adipisci quaerat consectetur</span></p>\n</div>"
+  }, {
+    "icon" : {
+      "name" : "Algolia",
+      "unicode" : "f36c",
+      "type" : "REGULAR"
+    },
+    "title" : "Feature Title",
+    "description" : "<div>\n<p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa tempora similique eos repudiandae adipisci quaerat consectetur</span></p>\n</div>"
+  }, {
+    "icon" : {
+      "name" : "Algolia",
+      "unicode" : "f36c",
+      "type" : "REGULAR"
+    },
+    "title" : "Feature Title",
+    "description" : "<div>\n<p><span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa tempora similique eos repudiandae adipisci quaerat consectetur</span></p>\n</div>"
+  } ]
+} ]

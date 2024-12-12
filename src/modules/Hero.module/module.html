@@ -1,0 +1,69 @@
+<div class="hero-section">
+  {%- if module.heading.text -%}
+  <div class="container">
+	<div class="hero-content">
+	  <h{{ module.heading.heading_type }} class="heading{% if module.heading.heading_type == '2' %} h2{%  else %} {{ module.heading.heading_style }}{% endif %}">
+		{{ module.heading.text }}
+	  </h{{ module.heading.heading_type }}>
+	</div>
+  </div>
+  {%- endif -%}
+</div>
+{% require_css %}
+<style>
+  {% scope_css %}
+  {%- if module.styles.background_type -%}
+  .hero-section {
+	{%- if module.styles.section_spacing -%}
+	{{ module.styles.section_spacing.css }};
+	{%- else -%}
+	height: 100vh;
+	{%- endif -%}
+	{%- if module.styles.background_type == 'image' -%}
+	background-color: rgb(27, 27, 30);
+	background-image: url({{ resize_image_url(module.styles.background.background_image.src, 0, 0, 1440) }});
+	background-size: {{ module.styles.background.background_image.background_size }};
+	background-position: {{ module.styles.background.background_image.background_position|lower|replace("_", " ")|replace("middle", "center") }};
+	{%- endif -%}
+	{%- if module.styles.background_type == 'color' -%}
+	background-color: rgba({{ module.styles.background.background_color.color|convert_rgb }}, {{ module.styles.background.background_color.opacity / 100 }});
+	{%- endif -%}
+	{%- if module.styles.background_type == 'image' and module.styles.background.background_overlay.color -%}
+	position: relative;
+	{%- endif -%}
+  }
+  {%- endif -%}
+
+  {%- if module.styles.background_type == 'image' and module.styles.background.background_overlay.color -%}
+  .hero-section:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba({{ module.styles.background.background_overlay.color|convert_rgb }}, {{ module.styles.background.background_overlay.opacity / 100 }});
+  }
+
+  .container {
+	position: relative;
+  }
+  {%- endif -%}
+
+  {% if module.styles.background_type == 'image' %}
+  @media(max-width: 991px) {
+	.hero-section {
+	  background-image: url({{ resize_image_url(module.styles.background.background_image.src, '991') }});
+	}
+  }
+  {%- endif -%}
+
+  {% if module.styles.custom_heading_font.css %}
+  .heading {
+	{{ module.styles.custom_heading_font.css }}
+  }
+  {%- endif -%}
+  {% end_scope_css %}
+</style>
+{% end_require_css %}
