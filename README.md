@@ -14,7 +14,7 @@ Create a custom landing page template using HubSpot CMS. The template should inc
 - A blog post section that dynamically pulls the latest three blog posts from HubSpot's blog.
 - Ensure the template is responsive and adheres to modern web design principles.
 
-## Output
+## Output <https://46194485-hs-sites-com.sandbox.hs-sites.com/home>
 
 - ## Hero Section
 
