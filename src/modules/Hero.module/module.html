@@ -59,9 +59,12 @@
   }
   {%- endif -%}
 
+  .heading {
+	color: #fff;
+  }
   {% if module.styles.custom_heading_font.css %}
   .heading {
-	{{ module.styles.custom_heading_font.css }}
+	{{ module.styles.custom_heading_font.css }};
   }
   {%- endif -%}
   {% end_scope_css %}
