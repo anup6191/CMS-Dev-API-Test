@@ -26,9 +26,8 @@ node_modules/
 ### Node ###
 # .node-version
 # Logs
-logs
-*.log
-npm-debug.log*
+# logs
+# npm-debug.log*
 
 ### VisualStudioCode ###
 .vscode/*
